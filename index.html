@@ -10,7 +10,13 @@
   <body>
     <div class="file_input">
       <label for="my_file_input"><h4>Upload Excel file:</h4></label>
-      <input type="file" id="my_file_input" name="Upload File" />
+      <input
+        name="secret_input"
+        id="secret_key"
+        placeholder="enter secret key"
+        type="password"
+      />
+      <input type="file" id="my_file_input" name="Upload File" disabled />
     </div>
     <div id="my_file_output"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

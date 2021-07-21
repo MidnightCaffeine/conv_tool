@@ -1,6 +1,15 @@
 var oFileIn;
 
 $(() => {
+  document.getElementById("secret_key").addEventListener("keyup", function () {
+    var secret_key_Input = document.getElementById("secret_key").value;
+    if (secret_key_Input != "" && secret_key_Input === "ute1234") {
+      document.getElementById("my_file_input").removeAttribute("disabled");
+    } else {
+      document.getElementById("my_file_input").setAttribute("disabled", null);
+    }
+  });
+
   oFileIn = document.getElementById("my_file_input");
   if (oFileIn.addEventListener) {
     oFileIn.addEventListener("change", filePicked, false);
