@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <style>
+      .file_input {
+        border: 5px outset red;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="file_input">
+      <label for="my_file_input"><h4>Upload Excel file:</h4></label>
+      <input type="file" id="my_file_input" name="Upload File" />
+    </div>
+    <div id="my_file_output"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
