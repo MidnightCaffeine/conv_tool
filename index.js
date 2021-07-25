@@ -57,13 +57,24 @@ const filePicked = (oEvent) => {
     });
     //below code to write updated csv in text format
     const saveUpdatedData = (csvData) => {
-      const finalData = csvData.split(",").join("#~#");
+      csvData.replaceAll("\n", "\r\n");
+      const finalData = csvData.replaceAll(",", "#~#");
       var blob = new Blob([finalData], {
         type: "text/plain;charset=utf-8",
       });
-      const fileName = `${sFilename.split(".")[0]}.txt`;
+      var fileName = `${sFilename.split(".")[0]}.txt`;
+      console.log(blob, "-----", finalData);
       //setTimeout(saveAs(blob, fileName), 8000);
-      saveAs(blob, fileName);
+      var saveFile = document.getElementById("save_file_btn");
+      saveFile.onclick = () => {
+        if (fileName) {
+          saveAs(blob, fileName);
+          alert("File saved!");
+        } else {
+          alert("Save canceled!");
+        }
+      };
+      //saveAs(blob, fileName);
     };
     saveUpdatedData(sCSV);
   };
