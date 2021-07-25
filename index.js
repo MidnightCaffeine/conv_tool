@@ -18,7 +18,6 @@ const filePicked = (oEvent) => {
   reader.onload = (e) => {
     var data = e.target.result;
     var file_type = sFilename.split(".").pop();
-    console.log("file type", file_type);
     //var cfb = XLS.CFB.read(data, { type: "binary" });
     var wb;
 
@@ -63,7 +62,6 @@ const filePicked = (oEvent) => {
         type: "text/plain;charset=utf-8",
       });
       var fileName = `${sFilename.split(".")[0]}.txt`;
-      console.log(blob, "-----", finalData);
       //setTimeout(saveAs(blob, fileName), 8000);
       var saveFile = document.getElementById("save_file_btn");
       saveFile.onclick = () => {
