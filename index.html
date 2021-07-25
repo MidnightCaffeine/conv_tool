@@ -10,18 +10,14 @@
   <body>
     <div class="file_input">
       <label for="my_file_input"><h4>Upload Excel file:</h4></label>
-      <input
-        name="secret_input"
-        id="secret_key"
-        placeholder="enter secret key"
-        type="password"
-      />
-      <input type="file" id="my_file_input" name="Upload File" disabled />
+      <input type="file" id="my_file_input" name="Upload File" />
     </div>
     <div id="my_file_output"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
